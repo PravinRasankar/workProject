@@ -11,7 +11,7 @@ if ((window.location.ancestorOrigins[0] != undefined && window.location.ancestor
 
     $(document).on("click", function(event) {
 		
-		var p2cResource = $(event.target).closest('[data-p2c]').attr('data-p2c');
+		var p2cResource = $(event.target).closest('[data-p2c-resource]').attr('data-p2c-resource');
 		var p2cData;
 		var p2cDataHtml;
 		var p2cResourceMetaData;
@@ -21,7 +21,7 @@ if ((window.location.ancestorOrigins[0] != undefined && window.location.ancestor
 			p2cData = $(event.target).closest('[data-p2c]').attr('data-p2c');
 			p2cDataHtml = $(event.target).closest('[data-p2c="'+p2cData+'"]')[0].outerHTML;
 			var dataToSend = {
-				source: "dpromo_sender",
+				source: "Iframe",
 				event: "clickedElementData",
 				data : {
 					p2cresource: p2cResource,
